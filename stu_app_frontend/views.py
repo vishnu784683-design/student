@@ -129,7 +129,7 @@ def login_view(request):
             login(request,user)
 
 
-            return redirect('dashboard')
+            return redirect('courses')
 
 
 
@@ -155,12 +155,12 @@ def login_view(request):
 
 # DASHBOARD
 
-def dashboard(request):
+#def courses(request):
 
-    return render(
-        request,
-        'dashboard.html'
-    )
+ #   return render(
+  #      request,
+   #     'courses.html'
+    #)
 
 
 

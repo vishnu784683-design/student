@@ -318,6 +318,657 @@ Download
 
 </div>
 
+
+
+
+
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>First Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>1-2 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Differenting Equations</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Basic Electrical & Eletronics</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Data Structure</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering physics</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Data Structure-lab</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Programming Lab</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Second Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>2-1 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Discrete Mathenatics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Data Structure</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Object-oriented programming</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Digital logic design</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Data Management System</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Java lab</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>DBMD lab</span>
+<div class="buttons">
+<a href="{% static 'beee.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'beee.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>First Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>2-2 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Oparations System</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Software Engineering</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Computer Organizations</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Full Stack Development</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>DAA lad</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Thired Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>3-1 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>computer network</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span></span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Chemistry</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Programming in Python</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Graphics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Introduction to Programming</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Basic Electrical Engineering</span>
+<div class="buttons">
+<a href="{% static 'beee.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'beee.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>First Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>1-1 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Engineering Physics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Mathematics-I</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Chemistry</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Programming in Python</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Graphics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Introduction to Programming</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Basic Electrical Engineering</span>
+<div class="buttons">
+<a href="{% static 'beee.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'beee.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>First Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>1-1 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Engineering Physics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Mathematics-I</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Chemistry</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Programming in Python</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Graphics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Introduction to Programming</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Basic Electrical Engineering</span>
+<div class="buttons">
+<a href="{% static 'beee.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'beee.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <footer>
 
 <h3>Mother Theresa College</h3>

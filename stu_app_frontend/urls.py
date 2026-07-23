@@ -26,12 +26,6 @@ name='register'
 ),
 
 
-path(
-'dashboard/',
-views.dashboard,
-name='dashboard'
-),
-
 
 path(
 'courses/',
@@ -74,6 +68,7 @@ path(
 views.student_details,
 name='student_details'
 ),
+ 
 
 
 ]
