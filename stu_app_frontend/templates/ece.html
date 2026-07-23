@@ -6,494 +6,393 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ECE Department - Mother Theresa College</title>
 
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
 <style>
 
-body{
-    background:#f4f8ff;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.navbar{
+body{
+    background:#f4f8ff;
+}
+
+/* Navbar */
+
+nav{
+    background:#198754;
     box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.back-btn{
+    text-decoration:none;
+    background:white;
+    color:#198754;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#e9ecef;
+}
+
+/* Hero */
 
 .hero{
-
-background:linear-gradient(135deg,#198754,#6ed89a);
-color:white;
-padding:50px;
-text-align:center;
-
+    background:linear-gradient(135deg,#198754,#6ed89a);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
 }
-
 
 .hero h1{
-
-font-size:45px;
-font-weight:bold;
-
+    font-size:42px;
+    margin-bottom:15px;
 }
 
+.hero p{
+    font-size:20px;
+}
+
+/* Cards */
 
 .year-card{
-
-border:none;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-margin-bottom:35px;
-
+    background:white;
+    border-radius:15px;
+    margin:40px auto;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    overflow:hidden;
 }
-
 
 .year-title{
-
-background:#198754;
-color:white;
-padding:15px;
-border-radius:15px 15px 0 0;
-
+    background:#198754;
+    color:white;
+    padding:18px;
 }
 
+.card-body{
+    padding:25px;
+}
+
+.card-body h3{
+    color:#198754;
+    margin-bottom:20px;
+}
 
 .subject{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px;
-border-bottom:1px solid #ddd;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+    flex-wrap:wrap;
 }
-
 
 .subject:last-child{
-
-border:none;
-
+    border-bottom:none;
 }
 
+.subject span{
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:8px 18px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.view{
+    background:#198754;
+}
+
+.download{
+    background:#0d6efd;
+}
+
+.view:hover{
+    background:#157347;
+}
+
+.download:hover{
+    background:#0b5ed7;
+}
+
+/* Footer */
 
 footer{
+    background:#198754;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
-background:#198754;
-color:white;
-text-align:center;
-padding:20px;
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.subject{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.buttons{
+    width:100%;
+}
+
+.btn{
+    flex:1;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
 
 }
 
 </style>
 
-
 </head>
-
 
 <body>
 
+<nav>
 
+<div class="container navbar">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-
-
-<div class="container">
-
-
-<a class="navbar-brand fw-bold">
-
-<i class="bi bi-mortarboard-fill"></i>
-
-Mother Theresa College
-
+<a href="{% url 'landing' %}" class="logo">
+🎓 Mother Theresa College
 </a>
 
-
-
-<a href="{% url 'dashboard' %}" class="btn btn-light">
-
-Back
-
+<a href="{% url 'dashboard' %}" class="back-btn">
+⬅ Back
 </a>
-
-
 
 </div>
-
 
 </nav>
 
-
-
-
-
 <section class="hero">
 
+<h1>Electronics and Communication Engineering</h1>
 
-<h1>
-
-Electronics and Communication Engineering
-
-</h1>
-
-
-<p>
-
-JNTUA B.Tech ECE Course Materials
-
-</p>
-
+<p>JNTUA B.Tech ECE Course Materials</p>
 
 </section>
 
+<div class="container">
 
+<!-- First Year -->
 
-
-
-<div class="container my-5">
-
-
-
-<div class="card year-card">
-
+<div class="year-card">
 
 <div class="year-title">
-
-<h3>First Year</h3>
-
+<h2>First Year</h2>
 </div>
-
-
 
 <div class="card-body">
 
-
-<h5>1-1 Semester</h5>
-
+<h3>1-1 Semester</h3>
 
 <div class="subject">
 
+<span>Engineering Physics</span>
 
-<span>
-Engineering Physics
-</span>
+<div class="buttons">
 
-
-
-<div>
-
-
-<a href="{% static 'pdfs/engineering_physics.pdf' %}" 
-class="btn btn-success btn-sm">
-
+<a href="{% static 'pdfs/engineering_physics.pdf' %}" target="_blank" class="btn view">
 View
-
 </a>
 
-
-
-<a href="{% static 'pdfs/engineering_physics.pdf' %}" 
-download
-class="btn btn-primary btn-sm">
-
+<a href="{% static 'pdfs/engineering_physics.pdf' %}" download class="btn download">
 Download
-
 </a>
 
-
-
 </div>
 
-
 </div>
-
-
-
 
 <div class="subject">
 
+<span>Engineering Mathematics</span>
 
-<span>
-Engineering Mathematics
-</span>
+<div class="buttons">
 
+<a href="#" class="btn view">View</a>
 
-<div>
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
+<a href="#" class="btn download">Download</a>
 
 </div>
 
-
 </div>
-
-
-
 
 <div class="subject">
 
+<span>Basic Electrical Engineering</span>
 
-<span>
-Basic Electrical Engineering
-</span>
+<div class="buttons">
 
+<a href="#" class="btn view">View</a>
 
-<div>
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
+<a href="#" class="btn download">Download</a>
 
 </div>
 
+</div>
 
 </div>
 
-
-
 </div>
 
+<!-- Second Year -->
 
-</div>
-
-
-
-
-
-<!-- Add remaining years here -->
-
-
-
-<div class="card year-card">
-
+<div class="year-card">
 
 <div class="year-title">
-
-<h3>Second Year</h3>
-
+<h2>Second Year</h2>
 </div>
-
 
 <div class="card-body">
 
+<div class="subject">
+
+<span>Electronic Devices and Circuits</span>
+
+<div class="buttons">
+
+<a href="#" class="btn view">View</a>
+
+<a href="#" class="btn download">Download</a>
+
+</div>
+
+</div>
 
 <div class="subject">
 
+<span>Signals and Systems</span>
 
-<span>
-Electronic Devices and Circuits
-</span>
+<div class="buttons">
 
+<a href="#" class="btn view">View</a>
 
-<div>
-
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
+<a href="#" class="btn download">Download</a>
 
 </div>
 
+</div>
 
 </div>
 
-
-<div class="subject">
-
-
-<span>
-Signals and Systems
-</span>
-
-
-<div>
-
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
-
 </div>
 
+<!-- Third Year -->
 
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="card year-card">
-
+<div class="year-card">
 
 <div class="year-title">
-
-<h3>Third Year</h3>
-
+<h2>Third Year</h2>
 </div>
-
 
 <div class="card-body">
 
-
 <div class="subject">
 
+<span>Microprocessors and Microcontrollers</span>
 
-<span>
-Microprocessors and Microcontrollers
-</span>
+<div class="buttons">
 
+<a href="#" class="btn view">View</a>
 
-<div>
-
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
+<a href="#" class="btn download">Download</a>
 
 </div>
 
+</div>
 
 </div>
 
-
-
 </div>
 
+<!-- Fourth Year -->
 
-</div>
-
-
-
-
-
-<div class="card year-card">
-
+<div class="year-card">
 
 <div class="year-title">
-
-<h3>Fourth Year</h3>
-
+<h2>Fourth Year</h2>
 </div>
-
 
 <div class="card-body">
 
-
 <div class="subject">
 
+<span>Major Project</span>
 
-<span>
-Major Project
-</span>
+<div class="buttons">
 
+<a href="#" class="btn view">View</a>
 
-<div>
-
-
-<a href="#" class="btn btn-success btn-sm">
-View
-</a>
-
-
-<a href="#" class="btn btn-primary btn-sm">
-Download
-</a>
-
+<a href="#" class="btn download">Download</a>
 
 </div>
 
+</div>
 
 </div>
 
-
-
 </div>
 
-
 </div>
-
-
-
-
-
-</div>
-
-
-
-
 
 <footer>
 
+<h3>Mother Theresa College</h3>
 
-<h5>
-
-Mother Theresa College
-
-</h5>
-
-
-<p>
-
-© 2026 All Rights Reserved
-
-</p>
-
+<p>© 2026 All Rights Reserved</p>
 
 </footer>
-
-
-
 
 </body>
 
