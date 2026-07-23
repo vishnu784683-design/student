@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mother Theresa College</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+}
+
+/* Navbar */
+
+nav{
+    background:#0d6efd;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn{
+    padding:10px 18px;
+    border-radius:5px;
+}
+
+.login{
+    background:white;
+    color:#0d6efd !important;
+}
+
+.register{
+    background:#ffc107;
+    color:black !important;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(13,110,253,.7),rgba(13,110,253,.7)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f0?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-buttons a{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:5px;
+    font-weight:bold;
+    margin:5px;
+    display:inline-block;
+}
+
+.apply{
+    background:#ffc107;
+    color:black;
+}
+
+.learn{
+    border:2px solid white;
+    color:white;
+}
+
+/* Section */
+
+section{
+    padding:70px 0;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.title p{
+    color:#555;
+}
+
+/* Features */
+
+.row{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    width:320px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0d6efd;
+}
+
+/* Statistics */
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.stats div{
+    margin:20px;
+}
+
+.stats h2{
+    color:#0d6efd;
+    font-size:40px;
+}
+
+/* Contact */
+
+.contact{
+    background:#eef4ff;
+    text-align:center;
+}
+
+.contact p{
+    margin:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.social{
+    margin-top:15px;
+    font-size:28px;
+}
+
+.social span{
+    margin:0 10px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.menu{
+    flex-direction:column;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container navbar">
+
+<a href="{% url 'landing' %}" class="logo">
+🎓 Mother Theresa College
+</a>
+
+<div class="menu">
+
+<a href="{% url 'landing' %}">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#courses">Courses</a>
+
+<a href="#contact">Contact</a>
+
+<a href="{% url 'login' %}" class="btn login">Login</a>
+
+<a href="{% url 'register' %}" class="btn register">Register</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Welcome to Mother Theresa College</h1>
+
+<p>
+Learn, Grow and Achieve Excellence with Quality Education.
+</p>
+
+<div class="hero-buttons">
+
+<a href="{% url 'register' %}" class="apply">
+Apply Now
+</a>
+
+<a href="#about" class="learn">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="title">
+
+<h2>About Our College</h2>
+
+<p>
+Mother Theresa College provides quality education with experienced faculty, modern laboratories, digital classrooms and excellent placement support.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<div class="container">
+
+<div class="row">
+
+<div class="card">
+
+<div class="icon">📚</div>
+
+<h3>Quality Education</h3>
+
+<p>
+Industry-oriented curriculum with experienced faculty members.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">💻</div>
+
+<h3>Digital Learning</h3>
+
+<p>
+Smart classrooms, online learning resources and computer laboratories.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">👨‍🎓</div>
+
+<h3>Placements</h3>
+
+<p>
+Excellent placement training and career guidance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container stats">
+
+<div>
+
+<h2>5000+</h2>
+
+<p>Students</p>
+
+</div>
+
+<div>
+
+<h2>200+</h2>
+
+<p>Faculty</p>
+
+</div>
+
+<div>
+
+<h2>30+</h2>
+
+<p>Courses</p>
+
+</div>
+
+<div>
+
+<h2>95%</h2>
+
+<p>Placements</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p><strong>Email:</strong> info@mothertheresacollege.edu</p>
+
+<p><strong>Phone:</strong> +91 9876543210</p>
+
+<p><strong>Address:</strong> Palamaner Road, Andhra Pradesh</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mother Theresa College. All Rights Reserved.</p>
+
+<div class="social">
+
+<span>📘</span>
+
+<span>📷</span>
+
+<span>🐦</span>
+
+<span>▶️</span>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>

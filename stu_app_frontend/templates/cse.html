@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSE Department - Mother Theresa College</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f8ff;
+}
+
+/* Navbar */
+
+nav{
+    background:#0d6efd;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.back-btn{
+    text-decoration:none;
+    background:white;
+    color:#0d6efd;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* Hero */
+
+.hero{
+    background:linear-gradient(135deg,#0d6efd,#6ea8fe);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* Cards */
+
+.year-card{
+    background:white;
+    border-radius:15px;
+    margin:40px auto;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    overflow:hidden;
+}
+
+.year-title{
+    background:#0d6efd;
+    color:white;
+    padding:18px;
+}
+
+.card-body{
+    padding:25px;
+}
+
+.card-body h3,
+.card-body h4{
+    margin-bottom:20px;
+    color:#0d6efd;
+}
+
+.subject{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+    flex-wrap:wrap;
+}
+
+.subject:last-child{
+    border-bottom:none;
+}
+
+.subject span{
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:5px;
+    color:white;
+    font-size:14px;
+}
+
+.view{
+    background:#0d6efd;
+}
+
+.download{
+    background:#198754;
+}
+
+/* Footer */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.subject{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.buttons{
+    width:100%;
+}
+
+.btn{
+    flex:1;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container navbar">
+
+<a href="{% url 'landing' %}" class="logo">
+🎓 Mother Theresa College
+</a>
+
+<a href="{% url 'courses' %}" class="back-btn">
+⬅ Back
+</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Computer Science and Engineering</h1>
+
+<p>JNTUA B.Tech CSE Course Materials</p>
+
+</section>
+
+<div class="container">
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>First Year</h2>
+</div>
+
+<div class="card-body">
+
+<h3>1-1 Semester</h3>
+
+{% for subject in subjects %}
+
+<div class="subject">
+
+<span>{{ subject.name }}</span>
+
+<div class="buttons">
+
+<a href="{{ subject.file.url }}" target="_blank" class="btn view">
+View
+</a>
+
+<a href="{{ subject.file.url }}" download class="btn download">
+Download
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="year-card">
+
+<div class="year-title">
+<h2>Sample Materials</h2>
+</div>
+
+<div class="card-body">
+
+<div class="subject">
+<span>Engineering Physics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Physics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Physics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Mathematics-I</span>
+<div class="buttons">
+<a href="{% static 'linear-guest.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'linear-guest.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Chemistry</span>
+<div class="buttons">
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering_Chemistry_I_II.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Programming in Python</span>
+<div class="buttons">
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'PYTHON PROGRAMMING NOTES.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Engineering Graphics</span>
+<div class="buttons">
+<a href="{% static 'Engineering Graphics.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'Engineering Graphics.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Introduction to Programming</span>
+<div class="buttons">
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'INTRODUCTION-TO-PROGRAMING-min.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+<div class="subject">
+<span>Basic Electrical Engineering</span>
+<div class="buttons">
+<a href="{% static 'beee.pdf' %}" target="_blank" class="btn view">View</a>
+<a href="{% static 'beee.pdf' %}" download class="btn download">Download</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Mother Theresa College</h3>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+
+</html>

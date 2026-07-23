@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses - Mother Theresa College</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0d6efd,#6ea8fe);
+    min-height:100vh;
+}
+
+/* Navbar */
+
+nav{
+    background:#0d6efd;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.logout{
+    background:white;
+    color:#0d6efd;
+}
+
+.details{
+    background:#ffc107;
+    color:black;
+}
+
+/* Header */
+
+.heading{
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+}
+
+.heading h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.heading p{
+    font-size:20px;
+}
+
+/* Cards */
+
+.course-grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding-bottom:60px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.view-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.view-btn:hover{
+    background:#084298;
+}
+
+/* Footer */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.nav-buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.btn{
+    text-align:center;
+}
+
+.heading h1{
+    font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container navbar">
+
+<a href="{% url 'landing' %}" class="logo">
+🎓 Mother Theresa College
+</a>
+
+<div class="nav-buttons">
+
+<a href="{% url 'landing' %}" class="btn logout">
+Logout
+</a>
+
+<a href="{% url 'student_details' %}" class="btn details">
+Registered Students
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="heading">
+
+<h1>Bachelor of Technology (B.Tech)</h1>
+
+<p>Select your Engineering Department</p>
+
+</div>
+
+<div class="course-grid">
+
+<!-- CSE -->
+
+<div class="card">
+
+<div class="icon">💻</div>
+
+<h3>Computer Science Engineering</h3>
+
+<p>
+Software Development, Artificial Intelligence,
+Data Science and Programming.
+</p>
+
+<a href="{% url 'cse' %}" class="view-btn">
+View Department
+</a>
+
+</div>
+
+<!-- ECE -->
+
+<div class="card">
+
+<div class="icon">📡</div>
+
+<h3>Electronics & Communication</h3>
+
+<p>
+Embedded Systems, VLSI,
+Communication Technologies.
+</p>
+
+<a href="{% url 'ece' %}" class="view-btn">
+View Department
+</a>
+
+</div>
+
+<!-- Civil -->
+
+<div class="card">
+
+<div class="icon">🏗️</div>
+
+<h3>Civil Engineering</h3>
+
+<p>
+Construction, Structural Design,
+Surveying and Infrastructure.
+</p>
+
+<a href="{% url 'civil' %}" class="view-btn">
+View Department
+</a>
+
+</div>
+
+<!-- Mechanical -->
+
+<div class="card">
+
+<div class="icon">⚙️</div>
+
+<h3>Mechanical Engineering</h3>
+
+<p>
+Manufacturing, Robotics,
+Automobile Engineering and Design.
+</p>
+
+<a href="{% url 'mechanical' %}" class="view-btn">
+View Department
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Mother Theresa College</h3>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+
+</html>
